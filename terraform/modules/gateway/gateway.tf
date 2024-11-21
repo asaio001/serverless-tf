@@ -73,10 +73,6 @@ output "role_arn" {
   value = aws_iam_role.api_role.arn
 }
 
-output "rest_api_id" {
-  value = aws_api_gateway_rest_api.api.id
-}
-
-output "root_resource_id" {
-  value = aws_api_gateway_rest_api.api.root_resource_id
+output "api" {
+  value = aws_api_gateway_rest_api.api
 }
