@@ -49,6 +49,10 @@ module "default_head_endpoint" {
     lambda_arn = "MOCK"
 }
 
+resource "aws_api_gateway_account" "account" {
+  cloudwatch_role_arn = aws_iam_role.api_role.arn
+}
+
 resource "aws_api_gateway_method_settings" "settings" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   stage_name  = aws_api_gateway_deployment.deployment.stage_name
