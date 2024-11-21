@@ -78,5 +78,5 @@ output "api" {
 }
 
 output "auth_id" {
-  value = aws_api_gateway_authorizer.user_auth.id
+  value = aws_api_gateway_authorizer.user_auth[0].id
 }
